@@ -1,11 +1,9 @@
-﻿//23757번
-
-#include <iostream>
+﻿#include <iostream>
 #include <queue>
 #include <vector>
 using namespace std;
 
-int main() 
+int main()
 {
 	int n, m;
 	cin >> n >> m;
@@ -26,14 +24,14 @@ int main()
 	}
 	for (int i = 0; i < m; i++)
 	{
-		if (nums.top < expectation[i])
+		if (nums.top() < expectation[i])
 		{
 			cout << 0;
 			return 0;
 		}
 		else
 		{
-			int tmp = nums.top()-expectation[i];
+			int tmp = nums.top() - expectation[i];
 			nums.pop();
 			nums.push(tmp);
 		}
